@@ -13,6 +13,7 @@ const getAllBooks = async(req,res) => {
      try{
             const books=await Book.find()
             res.status(200).send(books)
+            console.log("Failed to get books")
     }
     catch(error) {
         console.log("Error fetching books ",error)
